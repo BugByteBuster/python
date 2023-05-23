@@ -8,5 +8,8 @@ class Solution:
         return []
 
 solution = Solution()
-#testcase-1
+
+"""
+testcase-1
 print(solution.twoNumberSum(array=[3, 5, -4, 8, 11, 1, -1, 6], targetSum=10))
+"""
