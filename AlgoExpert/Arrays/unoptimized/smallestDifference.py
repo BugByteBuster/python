@@ -1,4 +1,4 @@
-#UnOptimized
+#UnOptimized O(n^2)
 def smallestDifference(arrayOne, arrayTwo):
     absolute_difference = {}
     for i in range(len(arrayOne)):
