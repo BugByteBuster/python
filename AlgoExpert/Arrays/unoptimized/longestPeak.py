@@ -14,6 +14,7 @@ def longestPeak(array):
                 result_array.append(array[rightIndex])
                 rightIndex += 1
             array_len.append(len(result_array))
+    
     if len(array_len) > 0:
         return max(array_len) + 3
     else:
