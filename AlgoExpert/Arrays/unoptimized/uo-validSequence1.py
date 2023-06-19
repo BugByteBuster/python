@@ -1,23 +1,16 @@
-#Un optimized:
 def isValidSubsequence(array, sequence):
-    indices = []
-    if len(sequence) > len(array):
-        return False
-    for element in sequence:
-        if element in array or array.count(element) == 1:
-            indices.append(array.index(element))
-        else:
-            return False
-    if len(set(indices)) == 1:
+    count = 0
+    for i in array:
+        if (
+            i in sequence
+            and array.index(i) >= sequence.index(i)
+            and count < len(sequence)
+        ):
+            count = count + 1
+
+    if count == len(sequence):
         return True
-    if sorted(indices) != indices or len(set(indices)) < len(indices):
-        return False
-    return True
+    return False
 
 
-"""
-    for element in sequence:   >> O(n)
-        if element in array or array.count(element) == 1:  >> O(n)
-    
-    O(n) * O(n) = O(n2) timecomplexity
-"""
+isValidSubsequence([1, 1, 1, 1, 1], [1, 1, 1])
