@@ -1,6 +1,10 @@
 def sortedSquaredArray(array):
-    return sorted([x*x for x in array])
+    multiplier = 0
+    result = []
+    while multiplier < len(array):
+        result.append(array[multiplier] * array[multiplier])
+        multiplier = multiplier + 1
+    return sorted(result)
 
-"""
-time complexity of sort function is O(nlogn)
-"""
+
+sortedSquaredArray([1, 2, 3, 5, 6, 8, 9])
