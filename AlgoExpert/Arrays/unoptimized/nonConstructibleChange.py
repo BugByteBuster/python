@@ -1,4 +1,3 @@
-#redo
 def nonConstructibleChange(coins):
     coins = sorted(coins)
     current_change = 0
