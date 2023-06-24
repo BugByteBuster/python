@@ -1,19 +1,35 @@
 def tournamentWinner(competitions, results):
-  teams_won = []
-  teams_lost = []
-  for i in range(len(results)):     #O(n)
-    if results[i] == 0:
-      winner = competitions[i][1]
-      teams_won.append(winner)
-    else: 
-      winner = competitions[i][0]
-      teams_won.append(winner)
-  print(max(teams_won, key=teams_won.count))    #O(n), max function
+    max_score = 0
+    winner = ""
+    team_scores = {}
+
+    for i in range(len(results)):
+        if results[i] == 0:
+            winner = competitions[i][1]
+        else:
+            winner = competitions[i][0]
+        if winner not in team_scores:
+            team_scores[winner] = 0
+        team_scores[winner] += 1
+        if team_scores[winner] > max_score:
+            max_score = team_scores[winner]
+            winning_team = winner
+
+    return winning_team
 
 
 tournamentWinner(
-    competitions = [ ["HTML", "C#"], ["C#", "Python"], ["Python", "HTML"] ], 
-    results = [0, 0, 1]
+    competitions=[
+        ["HTML", "Java"],
+        ["Java", "Python"],
+        ["Python", "HTML"],
+        ["C#", "Python"],
+        ["Java", "C#"],
+        ["C#", "HTML"],
+        ["SQL", "C#"],
+        ["HTML", "SQL"],
+        ["SQL", "Python"],
+        ["SQL", "Java"],
+    ],
+    results=[0, 1, 1, 1, 0, 1, 0, 1, 1, 0],
 )
-
-#timecomplexity = O(n)
