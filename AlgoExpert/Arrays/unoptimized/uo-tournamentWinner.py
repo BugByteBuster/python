@@ -11,6 +11,7 @@ def tournamentWinner(competitions, results):
         if winner not in team_scores:
             team_scores[winner] = 0
         team_scores[winner] += 1
+        
         if team_scores[winner] > max_score:
             max_score = team_scores[winner]
             winning_team = winner
