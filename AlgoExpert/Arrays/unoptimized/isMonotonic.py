@@ -1,4 +1,4 @@
-#lifted and optimized
+# lifted and optimized
 def isMonotonic(array):
     increasing = decreasing = True
     for i in range(len(array) - 1):

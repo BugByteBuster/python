@@ -1,4 +1,4 @@
-#Un-optimized: O(n) time complexity
+# Un-optimized: O(n) time complexity
 def moveElementToEnd(array, toMove):
     move_end_array = []
     occurrence = array.count(toMove)
@@ -9,5 +9,5 @@ def moveElementToEnd(array, toMove):
             move_end_array.append(i)
     for i in range(occurrence):
         move_end_array.append(toMove)
-    
+
     return move_end_array

@@ -15,4 +15,5 @@ def bestSeat(seats):
         left = right
     return bestSeat
 
+
 bestSeat([1, 0, 1, 0, 0, 0, 1])

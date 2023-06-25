@@ -7,6 +7,7 @@ def threeNumberSum(array, targetSum):
                 combination = [array[i], array[j], array[k]]
                 if sum(combination) == targetSum:
                     result.append(sorted(combination))
-    return (sorted(result))
+    return sorted(result)
+
 
 threeNumberSum(array=[12, 3, 1, 2, -6, 5, -8, 6], targetSum=8)

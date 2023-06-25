@@ -1,7 +1,7 @@
 def threeNumberSum(array, targetSum):
     result = []
     i = 0
-    array =sorted(array)
+    array = sorted(array)
     while i < len(array):
         if array[i] < 0:
             start = array[i]
