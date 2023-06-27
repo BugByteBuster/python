@@ -1,3 +1,4 @@
+#o(n) time complexity
 def twoNumberSum(array, targetSum):
     uniqueNumbers = set(array)
     for firstNumber in uniqueNumbers:
