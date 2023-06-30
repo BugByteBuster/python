@@ -1,3 +1,4 @@
+#o(nlogn)
 def nonConstructibleChange(coins):
     current_change = 0
     sorted_coins = sorted(coins)
