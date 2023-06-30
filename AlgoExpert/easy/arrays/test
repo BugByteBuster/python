@@ -1,0 +1,6 @@
+# bruteforce O(nlogn)
+def oneliner(array):
+    return sorted([x * x for x in array])
+
+sortedSquaredArray = lambda array: sorted([x**2 for x in array])
+

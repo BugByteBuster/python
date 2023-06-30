@@ -1,4 +1,4 @@
-# method - 1  O(n)
+# method-1  O(n)
 def isValidSubsequence(array, sequence):
     seqIdx = 0
     arrIdx = 0
@@ -11,8 +11,8 @@ def isValidSubsequence(array, sequence):
     return False
 
 
-# method -2 O(n)
-def isValidSubsequence(array, sequence):
+# method-2 O(n)
+def isValidSubsequence2(array, sequence):
     seqIdx = 0
     for ele in array:
         if ele == sequence[seqIdx]:
