@@ -1,3 +1,4 @@
+#O(width * height)
 def transposeMatrix(matrix):
     start_column = 0
     end_row = len(matrix)
