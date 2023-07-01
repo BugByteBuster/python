@@ -10,9 +10,10 @@ def removeDuplicatesFromLinkedList(linkedList):
     while currentNode.next:
         if currentNode.value != currentNode.next.value:
             currentNode = currentNode.next
-        else: 
+        else:
             currentNode.next = currentNode.next.next
     return linkedList
+
 
 head = LinkedList(1)
 head.next = LinkedList(1)
@@ -25,3 +26,14 @@ head.next.next.next.next.next.next.next = LinkedList(6)
 head.next.next.next.next.next.next.next.next = LinkedList(6)
 
 removeDuplicatesFromLinkedList(head)
+
+# testing.
+"""
+result = removeDuplicatesFromLinkedList(head)
+
+current = result
+while current is not None:
+    print(current.value, end=" -> ")
+    current = current.next
+print("None")
+"""
